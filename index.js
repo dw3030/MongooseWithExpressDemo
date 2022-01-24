@@ -23,7 +23,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-const categories = ["fruit", "vegetable", "dairy", "baked goods"];
+const categories = ["fruit", "vegetable", "dairy"];
 
 app.get("/products", async (req, res) => {
   const products = await Product.find({});
@@ -63,6 +63,12 @@ app.put("/products/:id", async (req, res) => {
   });
   res.redirect(`/products/${product._id}`);
   //   res.send("PUT!!");
+});
+
+app.delete("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  const deletedProduct = await Product.findByIdAndDelete(id);
+  res.redirect("/products");
 });
 app.listen(3000, () => {
   console.log("APP IS LISTENING ON PORT 3000");
