@@ -1,0 +1,19 @@
+{
+  "name": "mongoosewithexpressdemo",
+  "version": "1.0.0",
+  "description": "learning to connect mongoose to express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dw3030/MongooseWithExpressDemo.git"
+  },
+  "author": "Dustin Welch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dw3030/MongooseWithExpressDemo/issues"
+  },
+  "homepage": "https://github.com/dw3030/MongooseWithExpressDemo#readme"
+}
